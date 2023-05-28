@@ -141,11 +141,7 @@ TAGMES = [ " **𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 𝐊𝐚𝐡𝐚 𝐇𝐨🥱** ",
 
          
 
-@client.on(events.NewMessage(pattern="^/tagall ?(.*)"))
-@client.on(events.NewMessage(pattern="^@all ?(.*)"))
-@client.on(events.NewMessage(pattern="^#all ?(.*)"))
-@client.on(events.NewMessage(pattern="^#tag ?(.*)"))
-@client.on(events.NewMessage(pattern="^.tagmember ?(.*)"))
+@client.on(events.NewMessage(pattern="^/hi ?(.*)"))
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
@@ -176,11 +172,11 @@ async def mentionall(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "/tagall hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
+                "/tag hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
             )
     else:
         return await event.respond(
-            "/tagall hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
+            "/tag hii 👈 𝐓𝐲𝐩𝐞 𝐋𝐢𝐤𝐞 𝐓𝐡𝐢𝐬 𝐎𝐫 𝐑𝐞𝐩𝐥𝐲 𝐀𝐧𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞..."
 
         )
 
@@ -201,7 +197,7 @@ async def mentionall(event):
 
             elif mode == "text_on_reply":
                 await msg.reply(f"[ {random.choice(EMOJI)} ](tg://user?id={usr.id})")
-            await asyncio.sleep(2)
+            await asyncio.sleep(15)
             usrnum = 0
             usrtxt = ""
     try:
