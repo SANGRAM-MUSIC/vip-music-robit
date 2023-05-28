@@ -197,7 +197,7 @@ async def mentionall(event):
 
             elif mode == "text_on_reply":
                 await msg.reply(f"[ {random.choice(EMOJI)} ](tg://user?id={usr.id})")
-            await asyncio.sleep(15)
+            await asyncio.sleep(60)
             usrnum = 0
             usrtxt = ""
     try:
